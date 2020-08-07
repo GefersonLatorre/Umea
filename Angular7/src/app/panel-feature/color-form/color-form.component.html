@@ -1,0 +1,26 @@
+<form style="margin-left: 70px;" #form="ngForm">
+    <br> 
+    <div>
+        <h3 class="display-5 text-center">Modify Name Color</h3>
+    </div>
+    <input type="hidden" name="Id" [value]="datosColor.Id">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-stethoscope fa-lg" [class.green-icon]="Name.valid"
+                        [class.red-icon]="Name.invalid && Name.touched"></i>
+                </div>
+            </div>
+            <input name="Name" #Name="ngModel" [(ngModel)]="datosColor.Options" class="form-control" placeholder="Name"
+                required maxlength="25" minlength="5">
+        </div>
+    </div>       
+    <div class="form-group">
+        <button class="btn btn-primary btn-lg" (click)="update(datosColor)" [disabled]="form.invalid"><i
+                class="fas fa-database"></i> Modify</button>
+        <button style="float:right;" class="btn btn-danger btn-lg" (click)="viewColorForm.emit(false)"><i
+                class="fas fa-database"></i> Cancel</button>
+    </div>
+    <br> 
+</form>

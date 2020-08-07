@@ -1,0 +1,28 @@
+<div style="float: right;margin-left: 10px;">
+    <button class="btn btn-warning btn-lg" (click)="viewFeature.emit(false)">
+        <i class="fas fa-arrow-circle-left fa-lg"></i> Go Back
+    </button>
+</div>
+<div style="float: right;">
+    <h2 class="display-5 text-center">Colors Body List</h2>
+    <br>
+</div>
+<table class="table table-hover">
+    <tr>
+        <th>Color</th>
+        <th>Acronym</th>
+        <th>Options</th>
+    </tr>
+    <tr style="color: white;" *ngFor="let color of colors">
+        <td (click)="viewColorForm.emit(color)">{{color.Options}}</td>
+        <td>{{color.Acronym}}</td>
+        <td>
+            <button *ngIf="color.ShowBody" class="btn btn-danger" (click)="deleteColor(color)">
+                <i class="fas fa-trash-alt fa-lg"></i>
+            </button>
+            <button *ngIf="!color.ShowBody" class="btn btn-success" (click)="addColor(color)">
+                <i class="fas fa-plus-square fa-lg"></i>
+            </button>
+        </td>
+    </tr>
+</table>

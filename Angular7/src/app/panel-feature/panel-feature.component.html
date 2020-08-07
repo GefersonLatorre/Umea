@@ -1,0 +1,20 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a style="font-size: 28px;" class="navbar-brand text-white">Umea</a>
+</nav>
+<div class="jumbtron">
+    <br>
+    <div class="row">
+        <div class="col-md-5">
+            <app-feature-form *ngIf="!panelsHood && !panelsBody" (viewColorHood)="parentHood($event)"
+                (viewColorBody)="parentBody($event)" (sendObject)="featurePaint($event)"></app-feature-form>
+            <app-color-form [color]="datosC" *ngIf="panelsForm" (viewColorForm)="parentForm($event)"></app-color-form>
+            <app-color-list-body *ngIf="panelsBody" (viewColorForm)="parentForm($event)"
+                (viewFeature)="parentBody($event)"></app-color-list-body>
+            <app-color-list-hood *ngIf="panelsHood" (viewColorForm)="parentForm($event)"
+                (viewFeature)="parentHood($event)"></app-color-list-hood>
+        </div>
+        <div class="col-md-7">
+            <app-feature></app-feature>
+        </div>
+    </div>
+</div>

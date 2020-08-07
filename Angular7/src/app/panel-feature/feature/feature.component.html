@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <div style="float: right;" class="form-group">
+            <div class="input-group" style="margin: 20px;">
+                <h5>Umea - </h5>
+                <input type="number" style="width: 62px;height: 25px" disabled
+                    [(ngModel)]="datosFeature.Body" placeholder="Body" max="99" min="1">
+                <h5> - </h5>
+                <input type="number" style="width: 62px;height: 25px" disabled
+                    [(ngModel)]="datosFeature.Hood" placeholder="Hood" max="99" min="1">
+                <h5> - </h5>
+                <input type="text" style="width: 40px;height: 25px" disabled
+                    [(ngModel)]="datosFeature.ColorBody" placeholder="C-B" maxlength="2" minlength="2">
+                <h5> - </h5>
+                <input type="text" style="width: 40px;height: 25px" disabled
+                    [(ngModel)]="datosFeature.ColorHood" placeholder="C-H" maxlength="2" minlength="2">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <figure>
+                <img [src]=image alt="image" style="width:450px; height:400px">
+            </figure>
+        </div>
+    </div>

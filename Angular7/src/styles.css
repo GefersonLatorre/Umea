@@ -1,0 +1,60 @@
+body{
+    background-color: #435177;;
+}
+
+h1{
+    color: #fff;
+}
+
+h2{
+    color: #fff;
+}
+
+h3{
+    color: rgb(0, 102, 235);
+}
+
+h4{
+    color: rgb(196, 157, 157);
+}
+
+input.form-control:focus{
+    box-shadow: none;
+} 
+
+button.btn{
+    border-radius: 20px;
+    color: rgb(92, 87, 95);
+}
+
+#toast-container > div {
+    opacity:1;
+}
+
+figure{
+    margin: 100px;
+}
+
+table{
+    background-color: #535763;
+    margin: 0px 30px;
+}
+
+form{
+    margin: 0px 16px;
+}
+
+input.ng-touched.ng-invalid{
+    border: 2px solid #dc3545;
+}
+
+input.ng-valid{
+    border: 2px solid #28a745;
+}
+
+.green-icon{
+    color: #28a745;
+}
+.red-icon{
+    color: #dc3545;
+}
